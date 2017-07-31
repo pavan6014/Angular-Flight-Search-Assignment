@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Flight Search</title>
+        <link rel="stylesheet" href="css/jquery-ui.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+	
+    </head>
+    <body ng-app="mainApp">
+        <header>
+            <div class="title">Flight Search Engine</div>
+        </header>
+
+		<div class="container" ng-controller="flightSearchController">
+			<div class="two-col">
+				<div class="row">
+					<div class="col-3">
+						<!-- Flight Search form -->
+						<ng-include src="'components/flightSearch/flightSearch.html'"></ng-include>
+					</div>
+					<div class="col-9" ng-show="showResults">
+						<!-- Flight Results Directive -->
+						<resultsgrid flight-details-filter="formData" show-results="showResults"></resultsgrid>
+					</div>				
+				</div>
+			</div>
+		</div>
+
+        <script type="text/javascript" src="libs/jquery.js"></script>
+        <script type="text/javascript" src="libs/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="libs/angular.min.js"></script>
+        <script type="text/javascript" src="app.module.js"></script>
+        <script type="text/javascript" src="components/flightSearch/flightSearchController.js"></script>
+        <script type="text/javascript" src="components/flightResults/flightResultsDirective.js"></script>
+        <script type="text/javascript" src="components/filter/customFilter.js"></script>
+        <script type="text/javascript" src="components/sharedControls/customControls.js"></script>
+        <script type="text/javascript" src="components/sharedControls/datePicker.js"></script>
+        <script type="text/javascript" src="components/sharedControls/slider.js"></script>
+    </body>
+</html>

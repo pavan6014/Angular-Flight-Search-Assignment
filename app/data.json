@@ -1,0 +1,76 @@
+[
+  {
+    "id": 0,
+    "flightName": "twoWayFlight 1",
+    "from": "Bangalore",
+    "to": "Hyderabad",
+    "departureTime": "02:30pm",
+    "arrivalTime": "03:30pm",
+    "date": "08/05/2017",
+	"returnDate" : "08/07/2017",
+	"returnDepartureTime": "05:30pm",
+    "returnArrivalTime": "06:30pm",
+    "flightRate": "1500 INR"
+  },
+  {
+    "id": 1,
+    "flightName": "OneWay Flight Bangalore-Hyderabad 1",
+    "from": "Bangalore",
+    "to": "Hyderabad",
+    "departureTime": "02:30pm",
+    "arrivalTime": "03:30pm",
+    "date": "08/05/2017",
+    "flightRate": "1200 INR"
+  },
+  {
+    "id": 2,
+    "flightName": "OneWay Flight Bangalore-Hyderabad 2",
+    "from": "Bangalore",
+    "to": "Hyderabad",
+    "departureTime": "04:30pm",
+    "arrivalTime": "05:30pm",
+    "date": "08/05/2017",
+    "flightRate": "1900 INR"
+  },
+  {
+    "id": 3,
+    "flightName": "OneWay Flight Bangalore-Hyderabad 3",
+    "from": "Bangalore",
+    "to": "Hyderabad",
+    "departureTime": "06:30pm",
+    "arrivalTime": "07:30pm",
+    "date": "08/05/2017",
+    "flightRate": "2000 INR"
+  },
+  {
+    "id": 4,
+    "flightName": "OneWay Flight Hyderabad-Bangalore 1",
+    "from": "Hyderabad",
+    "to": "Bangalore",
+    "departureTime": "02:30pm",
+    "arrivalTime": "03:30pm",
+    "date": "08/07/2017",
+    "flightRate": "1200 INR"
+  },
+  {
+    "id": 5,
+    "flightName": "OneWay Flight Hyderabad-Bangalore 2",
+    "from": "Hyderabad",
+    "to": "Bangalore",
+    "departureTime": "04:30pm",
+    "arrivalTime": "05:30pm",
+    "date": "08/07/2017",
+    "flightRate": "1900 INR"
+  },
+  {
+    "id": 6,
+    "flightName": "OneWay Flight Hyderabad-Bangalore 3",
+    "from": "Hyderabad",
+    "to": "Bangalore",
+    "departureTime": "06:30pm",
+    "arrivalTime": "07:30pm",
+    "date": "08/07/2017",
+    "flightRate": "2000 INR"
+  }
+]
+

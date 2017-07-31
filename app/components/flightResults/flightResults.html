@@ -1,0 +1,40 @@
+<div class="results-grid">
+	<div class="row">
+		<div class="grid-header">
+			<div class="grid-col col-12 text-uppercase">
+				<h3 class="float-left margin-right-10">{{flightDetailsFilter.startPlace}} > </h3> 
+				<h3 class="float-left margin-right-10"> {{flightDetailsFilter.endPlace}} </h3>
+				<h3 class="float-left margin-right-10" ng-show="flightDetailsFilter.tripType === 'twoway'"> > {{flightDetailsFilter.startPlace}} </h3>
+			</div>
+		</div>
+	</div>
+	<div class="row" ng-repeat="flights in flightDetails | mySearchFilter:{from: flightDetailsFilter.startPlace, to: flightDetailsFilter.endPlace, date: flightDetailsFilter.startDate, returnDate: flightDetailsFilter.returnDate, sliderValue: flightDetailsFilter.sliderValue}:true">
+		<div class="grid-body">
+			<div class="grid-col col-4">
+				<h2>{{flights.flightRate}}</h2>
+				<h4 class="text-uppercase">{{flights.from}} > {{flights.to}}</h4>
+				<h4>Departure: {{flights.departureTime}}</h4>
+				<h4>Arrival: {{flights.arrivalTime}}</h4>
+			</div>
+			<div class="grid-col col-4" ng-show="flightDetailsFilter.tripType === 'twoway'">
+				<h2>{{flights.flightRate}}</h2>
+				<h4 class="text-uppercase">{{flights.to}} > {{flights.from}}</h4>
+				<h4>Departure: {{flights.returnDepartureTime}}</h4>
+				<h4>Arrival: {{flights.returnArrivalTime}}</h4>
+			</div>
+			<div class="grid-col col-4 float-right">
+				<div class="float-right">
+					<img src="css/images/flight-big-icon.png" class="display-block img-responsive" />
+					<button class="btn btn-primary">Book This Fight</button>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="row" ng-if="(flightDetails | mySearchFilter:{from: flightDetailsFilter.startPlace, to: flightDetailsFilter.endPlace, date: flightDetailsFilter.startDate, returnDate: flightDetailsFilter.returnDate, sliderValue: flightDetailsFilter.sliderValue}:true).length===0">
+		<div class="grid-body">
+			<div class="grid-col col-4">
+				<p> No Flight available with the search criteria </p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div>
+	<ul class="nav nav-tabs">
+		<li ng-click="selectTrip('oneway')">One Way</li>
+		<li ng-click="selectTrip('twoway')">Return</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane">
+			<form class="grid grid-pad" name="searchForm" id="{{formId}}">
+				<div class="form-group">
+					<input title="Journey start location" class="form-control" required ng-model="formData.startPlace" placeholder="Enter Origin City" id="startPlace" name="startPlace" type="text"/>
+				</div>
+				<div class="form-group">
+					<input title="Destination location" class="form-control" required ng-model="formData.endPlace" placeholder="Enter Destination City" id="endPlace" name="endPlace" type="text"/>
+				</div>
+				<div class="form-group">
+					<date-picker date="formData.startDate" placeholder="Departure Date in mm/dd/yy" is-required="true" name="startDate"></date-picker>
+				</div>
+				<div class="form-group" ng-if="formData.tripType === 'twoway'">
+					<date-picker date="formData.returnDate" placeholder="Return Date in mm/dd/yy" is-required="true" name="returnDate"></date-picker>
+				</div>
+				<div class="form-group">
+					<input title="Passengers" class="form-control" required ng-model="formData.passengers" placeholder="Passengers" id="passengers" name="passengers" type="number"/>
+				</div>
+				<div>
+					<button class="btn btn-primary" title="Provide search details" ng-disabled="searchForm.$invalid" ng-click="search();">Search</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="tab-content margin-top-10">
+		<div class="tab-pane">
+			<div class="form-group slider-control">
+				<p class="slider-section">
+					Refine Flight Search upto <label>{{formData.sliderValue || 15000}}</label><br/>
+					Default value loaded is 5000
+				</p>
+				<slider slider-callback="sliderCallback(sliderValue)" slider-value="formData.sliderValue" slider-max-value="15000" value="5000" slider-min-value="0"></slider>
+			</div>
+		</div>
+	</div>
+</div>

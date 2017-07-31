@@ -1,0 +1,38 @@
+{
+  "name": "my-application",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flight search module",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Papaiah Ikkurthi",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower-install": "^1.6.0",
+    "grunt-karma": "^0.12.1",
+    "grunt-npm-install": "^0.3.0",
+    "grunt-serve": "^0.1.6",
+    "jasmine": "^2.6.0",
+    "jasmine-core": "^2.4.1",
+    "jasmine-spec-reporter": "^4.1.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.7",
+    "karma-ng-html2js-preprocessor": "^0.2.1",
+    "karma-qunit": "^1.2.1"
+  },
+  "dependencies": {
+    "bower": "^1.8.0",
+    "http-server": "^0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "<https://github.com/npm/npm.git>"
+  }
+}
